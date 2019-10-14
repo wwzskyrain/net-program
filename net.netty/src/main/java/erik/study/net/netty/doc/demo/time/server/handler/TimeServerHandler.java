@@ -21,13 +21,13 @@ public class TimeServerHandler extends ChannelInboundHandlerAdapter {
         byteBuf.writeInt((int) (System.currentTimeMillis() / 1000L + 2208988800L));
 
         // A ChannelFuture represents an I/O operation which has not yet occurred.
-        // ChannelFuture代表一个还没有完成的io操作
         final ChannelFuture channelFuture = ctx.writeAndFlush(byteBuf);
 
         channelFuture.addListener(new ChannelFutureListener() {
+            @Override
             public void operationComplete(ChannelFuture future) throws Exception {
                 assert channelFuture == future;
-                ctx.close();
+                ctx.close();  //不要主动关闭ctx
             }
         });
     }

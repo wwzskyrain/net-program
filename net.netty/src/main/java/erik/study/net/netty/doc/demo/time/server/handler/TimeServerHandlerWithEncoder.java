@@ -15,6 +15,7 @@ public class TimeServerHandlerWithEncoder extends ChannelInboundHandlerAdapter {
     @Override
     public void channelActive(ChannelHandlerContext ctx) throws Exception {
         ChannelFuture future = ctx.writeAndFlush(new UnixTime());
+        //
         future.addListener(ChannelFutureListener.CLOSE);
     }
 }

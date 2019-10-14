@@ -1,4 +1,4 @@
-package erik.study.net.netty.doc.demo.time.client;
+package erik.study.net.netty.doc.demo.time3;
 
 import erik.study.net.netty.doc.demo.time.client.decode.TimeDecode;
 import erik.study.net.netty.doc.demo.time.client.handler.TimeClientHandler;
@@ -44,11 +44,10 @@ public class TimeClientWithDecoder {
                     .option(ChannelOption.SO_KEEPALIVE, true);
 
             ChannelFuture channelFuture = bootstrap.connect(host, port).sync();
-            logger.info("close future before.");
-            channelFuture.channel().closeFuture().sync();
+//            channelFuture.channel().closeFuture().sync();
             logger.info("time client is closing.");
         } finally {
-//            workerGroup.shutdownGracefully();
+            workerGroup.shutdownGracefully();
         }
     }
 
