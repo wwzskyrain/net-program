@@ -14,7 +14,7 @@ public enum FunctionCode {
         this.desc = desc;
     }
 
-    public FunctionCode valueOf(byte id) {
+    public static FunctionCode valueOf(byte id) {
         switch (id) {
             case (byte) 0x81:
                 return POSITIVE_UP_LOAD;

@@ -1,12 +1,10 @@
 package erik.device.transport.enums;
 
-import java.io.Serializable;
-
 /**
  * @author: erik.wang
  * @Date: 2019-10-13
  */
-public enum InformationType {
+public enum MessageType {
 
     DEVICE_TERMINAL((byte) 0x01, "设备终端"),
     BASE_STATION_POSITION((byte) 0x02, "基站定位"),
@@ -20,12 +18,12 @@ public enum InformationType {
     private byte id;
     private String desc;
 
-    InformationType(byte id, String desc) {
+    MessageType(byte id, String desc) {
         this.id = id;
         this.desc = desc;
     }
 
-    public static InformationType valueOf(byte typeId) {
+    public static MessageType valueOf(byte typeId) {
         switch (typeId) {
             case (byte) 0x01:
 
