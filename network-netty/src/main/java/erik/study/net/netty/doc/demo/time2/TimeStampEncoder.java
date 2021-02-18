@@ -1,5 +1,6 @@
 package erik.study.net.netty.doc.demo.time2;
 
+import com.alibaba.fastjson.JSON;
 import io.netty.buffer.ByteBuf;
 import io.netty.channel.ChannelHandlerContext;
 import io.netty.handler.codec.MessageToByteEncoder;
@@ -13,7 +14,7 @@ public class TimeStampEncoder extends MessageToByteEncoder<LoopBackTimeStamp> {
      */
     @Override
     protected void encode(ChannelHandlerContext ctx, LoopBackTimeStamp msg, ByteBuf out) throws Exception {
-        log.info("这时msg还只有sentTimeStamp，msg={}", msg);
+        log.info("这时msg还只有sentTimeStamp，msg={}", JSON.toJSONString(msg));
         out.writeBytes(msg.toByteArray());
     }
 }

@@ -16,7 +16,7 @@ public class ClientHandler extends ChannelInboundHandlerAdapter {
         // 是的，有一个解码器。解码的时候还添加了接受时间，不，不用。
         // 发送的是ServerHandler，接受的也是它。
         LoopBackTimeStamp ts = (LoopBackTimeStamp) msg;
-        logger.info("ts:{}", JSON.toJSONString(ts));
+        logger.info("收到的loopBack", JSON.toJSONString(ts));
 
         //recieved message sent back directly
         //好像听说过，调用这个方法会触发outBound方向的handler
