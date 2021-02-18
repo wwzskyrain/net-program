@@ -51,6 +51,20 @@
                 <version>1.2.62</version>
             </dependency>
 
+            <!--  lombok -->
+            <dependency>
+                <groupId>org.projectlombok</groupId>
+                <artifactId>lombok</artifactId>
+                <version>1.18.12</version>
+            </dependency>
+
+            <!--    netty    -->
+            <dependency>
+                <groupId>io.netty</groupId>
+                <artifactId>netty-all</artifactId>
+                <version>4.1.40.Final</version>
+            </dependency>
+
 
         </dependencies>
     </dependencyManagement>

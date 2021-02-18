@@ -1,7 +1,7 @@
 package erik.study.net.netty.doc.demo.time.client;
 
-import erik.study.net.netty.doc.demo.time.client.decode.TimeDecode;
-import erik.study.net.netty.doc.demo.time.client.handler.TimeClientHandler;
+import erik.study.net.netty.doc.demo.time.client.decode.TimeDecodeWithPojo;
+import erik.study.net.netty.doc.demo.time.client.handler.TimeClientHandlerWithPojo;
 import io.netty.bootstrap.Bootstrap;
 import io.netty.channel.ChannelFuture;
 import io.netty.channel.ChannelInitializer;
@@ -38,17 +38,17 @@ public class TimeClientWithDecoder {
                         @Override
                         protected void initChannel(SocketChannel ch) throws Exception {
                             ch.pipeline()
-                                    .addLast(new TimeDecode()).addLast(new TimeClientHandler());
+                                    .addLast(new TimeDecodeWithPojo())
+                                    .addLast(new TimeClientHandlerWithPojo());
                         }
                     })
                     .option(ChannelOption.SO_KEEPALIVE, true);
 
             ChannelFuture channelFuture = bootstrap.connect(host, port).sync();
-            logger.info("close future before.");
             channelFuture.channel().closeFuture().sync();
-            logger.info("time client is closing.");
         } finally {
-//            workerGroup.shutdownGracefully();
+            workerGroup.shutdownGracefully();
+            logger.info("finally块，验证shutdownGracefully并不会真的关闭链接-验证失败");
         }
     }
 

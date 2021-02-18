@@ -8,11 +8,13 @@ import io.netty.channel.EventLoopGroup;
 import io.netty.channel.nio.NioEventLoopGroup;
 import io.netty.channel.socket.SocketChannel;
 import io.netty.channel.socket.nio.NioServerSocketChannel;
+import lombok.extern.slf4j.Slf4j;
 
 /**
  * @author erik.wang
  * @Date 2019-09-30
  */
+@Slf4j
 public class DiscardServer {
 
     private int port;
@@ -40,7 +42,6 @@ public class DiscardServer {
                     .childOption(ChannelOption.SO_KEEPALIVE, true);
 
             ChannelFuture channelFuture = bootstrap.bind(port).sync();
-
 
             channelFuture.channel().closeFuture().sync();
         } finally {

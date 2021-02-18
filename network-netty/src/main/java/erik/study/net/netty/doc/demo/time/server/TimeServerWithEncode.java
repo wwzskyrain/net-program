@@ -1,10 +1,12 @@
 package erik.study.net.netty.doc.demo.time.server;
 
-import erik.study.net.netty.doc.demo.time.client.encode.TimeEncode;
 import erik.study.net.netty.doc.demo.time.client.encode.TimeEncodeWithMessageToByteEncode;
 import erik.study.net.netty.doc.demo.time.server.handler.TimeServerHandlerWithEncoder;
 import io.netty.bootstrap.ServerBootstrap;
-import io.netty.channel.*;
+import io.netty.channel.ChannelFuture;
+import io.netty.channel.ChannelInitializer;
+import io.netty.channel.ChannelOption;
+import io.netty.channel.EventLoopGroup;
 import io.netty.channel.nio.NioEventLoopGroup;
 import io.netty.channel.socket.SocketChannel;
 import io.netty.channel.socket.nio.NioServerSocketChannel;
@@ -31,8 +33,11 @@ public class TimeServerWithEncode {
                         @Override
                         protected void initChannel(SocketChannel ch) throws Exception {
                             // 服务端，一定要把编码器写在业务Handler之前
-                            ch.pipeline().addLast(new TimeEncodeWithMessageToByteEncode())
-                                    .addLast(new TimeServerHandlerWithEncoder());
+                            ch.pipeline()
+                                    .addLast(new TimeEncodeWithMessageToByteEncode())
+                                    .addLast(new TimeServerHandlerWithEncoder())
+
+                            ;
 
                         }
                     })

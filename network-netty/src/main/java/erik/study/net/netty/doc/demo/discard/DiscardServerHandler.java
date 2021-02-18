@@ -4,15 +4,13 @@ import io.netty.buffer.ByteBuf;
 import io.netty.channel.ChannelHandlerContext;
 import io.netty.channel.ChannelInboundHandlerAdapter;
 import io.netty.util.ReferenceCountUtil;
-
-import java.util.ArrayList;
-import java.util.Arrays;
-import java.util.List;
+import lombok.extern.slf4j.Slf4j;
 
 /**
  * @author erik.wang
  * @Date 2019-09-30
  */
+@Slf4j
 public class DiscardServerHandler extends ChannelInboundHandlerAdapter {
 
     @Override
@@ -24,7 +22,8 @@ public class DiscardServerHandler extends ChannelInboundHandlerAdapter {
             while (inByteBuf.isReadable()) { // (1)
                 stringBuilder.append(((char) inByteBuf.readByte()));
             }
-            System.out.print(stringBuilder.toString());
+            log.info("hashCode:{}, content:{}",this.hashCode(),stringBuilder.toString());
+            // TODO: 2021/2/17 客户端的信息在哪里持有，在哪里维护？
         } finally {
             ReferenceCountUtil.release(msg);
         }
