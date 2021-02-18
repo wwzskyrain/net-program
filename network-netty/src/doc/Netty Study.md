@@ -13,4 +13,12 @@
     3.  
 4.  我以为加入到pipeline中的handler，应该分两种来排序，
     inbound和outbound？可是总不对。
-5.  
+5.  今天学到了不少东西
+    1.  encode和decode的本质和作用方向
+        1.  本质：在byte和message之间的转换
+        2.  作用方向：无论是client和server，encode永远是出，decode永远是近
+        3.  一个方向可以多decode或者多encode吗？有必要吗？
+    2.  IdleHandler的使用-配合userEvent
+    3.  学习了LoopBackTimeStamp
+    4.  学习了手动input版本的 echo协议
+    
