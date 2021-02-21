@@ -22,3 +22,22 @@
     3.  学习了LoopBackTimeStamp
     4.  学习了手动input版本的 echo协议
     
+# 2.实战
+## 2月21日-pipeline的执行顺序
+1.  pipeline是有channelHandler组成的双向链表，其执行顺序指的就是这些handler上各个
+    动作的执行传递情况。
+2.  整体来讲，handler分in和out两种。
+    in-handler的操作会顺着in-handler正向传下去，对应的就是next指针，
+    out-handler的操作会逆向传下去，对应的就是pre指针。
+    如果这个链中有一个没有向下传递，那这个动作就到此为止了。
+    可以从handler中用HandlerContext随时发起动作。
+3.  in方向是正向，只管数据读入；out方向是反向，管数据写出。
+4.  热门问题：ctx.writeAndFlush与ctx.channel().writeAndFlush的区别
+    答：很简单，前者是从当前handler写入，而后者是从最末tail的handler写入。
+    
+    ```
+        public final ChannelFuture writeAndFlush(Object msg) {
+            return tail.writeAndFlush(msg);
+        }
+    ```
+## 
