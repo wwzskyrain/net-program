@@ -25,7 +25,6 @@ public class ExecuteTaskHandler extends ChannelInboundHandlerAdapter {
         log.info("收到数据:{}", byteBuf.toString(Charset.defaultCharset()));
         channel.eventLoop().scheduleAtFixedRate(new Runnable() {
             //该任务将在EventLoop线程执行
-            // TODO 2019-10-04 请测试
             public void run() {
                 channel.writeAndFlush(Unpooled.copiedBuffer("hello.world", CharsetUtil.UTF_8));
                 log.info("每隔5面写数据给客户端.");
