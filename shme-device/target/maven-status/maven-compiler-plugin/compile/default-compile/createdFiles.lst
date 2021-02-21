@@ -1,0 +1,15 @@
+erik/device/transport/dto/message/BaseStationLocationMessage.class
+erik/device/transport/enums/FunctionCode.class
+erik/device/transport/dto/Frame$1.class
+erik/device/common/util/ByteUtil.class
+erik/device/transport/dto/message/BaseStationLocationMessage$AdjacentRegionMessage.class
+erik/device/transport/dto/message/DeviceTerminalMessage$Builder.class
+erik/device/transport/dto/Frame.class
+erik/device/transport/enums/MessageType.class
+erik/device/transport/dto/Filed.class
+erik/device/transport/enums/Factory.class
+erik/device/common/util/HexNumberUtil.class
+erik/device/transport/enums/CheckSumParameter.class
+erik/device/transport/dto/Message.class
+erik/device/transport/dto/message/DeviceTerminalMessage.class
+erik/device/transport/server/FrameDecoder.class

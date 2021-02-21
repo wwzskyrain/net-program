@@ -1,0 +1,12 @@
+/Users/yueyi/project_yue/net-program/shme-device/src/main/java/erik/device/transport/dto/message/BaseStationLocationMessage.java
+/Users/yueyi/project_yue/net-program/shme-device/src/main/java/erik/device/transport/server/FrameDecoder.java
+/Users/yueyi/project_yue/net-program/shme-device/src/main/java/erik/device/transport/dto/message/DeviceTerminalMessage.java
+/Users/yueyi/project_yue/net-program/shme-device/src/main/java/erik/device/transport/enums/Factory.java
+/Users/yueyi/project_yue/net-program/shme-device/src/main/java/erik/device/transport/enums/FunctionCode.java
+/Users/yueyi/project_yue/net-program/shme-device/src/main/java/erik/device/common/util/ByteUtil.java
+/Users/yueyi/project_yue/net-program/shme-device/src/main/java/erik/device/transport/dto/Filed.java
+/Users/yueyi/project_yue/net-program/shme-device/src/main/java/erik/device/transport/enums/MessageType.java
+/Users/yueyi/project_yue/net-program/shme-device/src/main/java/erik/device/transport/dto/Message.java
+/Users/yueyi/project_yue/net-program/shme-device/src/main/java/erik/device/transport/dto/Frame.java
+/Users/yueyi/project_yue/net-program/shme-device/src/main/java/erik/device/transport/enums/CheckSumParameter.java
+/Users/yueyi/project_yue/net-program/shme-device/src/main/java/erik/device/common/util/HexNumberUtil.java
