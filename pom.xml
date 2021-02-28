@@ -65,6 +65,18 @@
                 <version>4.1.40.Final</version>
             </dependency>
 
+            <!--    google        -->
+            <dependency>
+                <groupId>com.google.guava</groupId>
+                <artifactId>guava</artifactId>
+                <version>18.0</version>
+            </dependency>
+
+            <dependency>
+                <groupId>org.projectlombok</groupId>
+                <artifactId>lombok</artifactId>
+                <version>1.18.12</version>
+            </dependency>
 
         </dependencies>
     </dependencyManagement>

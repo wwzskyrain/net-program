@@ -51,3 +51,40 @@
     1.  差不多可以开始写哥哥的那个协议了，周末吧；估计接下来的几天很忙。
     2.  不放心的话，还可以再瞅瞅netty源码中的一些现成的协议，比如redis.
         在 io.netty.example.redis.RedisClientHandler
+        
+## 2月22日-
+1.  netty源码编译有点问题，找不到netty-tcnative的指定版本了。`Cannot resolve io.netty:netty-tcnative:2.0.36.Final`
+
+## 2月23日 周三
+1.  我已经在关注连接管理了
+    1.  [Netty实现单机百万连接和应用级别性能调优](https://blog.csdn.net/qq_33458621/article/details/98775406?utm_medium=distribute.pc_relevant.none-task-blog-baidujs_title-2&spm=1001.2101.3001.4242)
+        1.  可以模拟这试一下
+        2.  啥时候可以上云服务器呀？
+    2.  如何保持链接？
+        1.  放到db中吧，好像不行，如果10w链接，那么db的并发就有10了。
+            那就放到redis里？10w个redis记录也不好遍历。
+            为啥要管理链接呢？
+        2.  google一下呢？
+
+## 2月24日 周四
+1.  netty源码编译又失败了：
+    `Could not find artifact io.netty:netty-transport-native-kqueue:zip:native-src:4.1.60.Final-SNAPSHOT in nexus-server@alipay (http://mvn.test.alipay.net:8080/artifactory/repo)`
+    
+```
+[ERROR] 
+[ERROR] Try downloading the file manually from the project website.
+[ERROR] 
+[ERROR] Then, install it using the command: 
+[ERROR]     mvn install:install-file -DgroupId=io.netty -DartifactId=netty-transport-native-kqueue -Dversion=4.1.60.Final-SNAPSHOT -Dclassifier=native-src -Dpackaging=zip -Dfile=/path/to/file
+[ERROR] 
+[ERROR] Alternatively, if you host your own repository you can deploy the file there: 
+[ERROR]     mvn deploy:deploy-file -DgroupId=io.netty -DartifactId=netty-transport-native-kqueue -Dversion=4.1.60.Final-SNAPSHOT -Dclassifier=native-src -Dpackaging=zip -Dfile=/path/to/file -Durl=[url] -DrepositoryId=[id]
+[ERROR] 
+[ERROR] 
+[ERROR]   io.netty:netty-transport-native-kqueue:zip:4.1.60.Final-SNAPSHOT
+[ERROR] 
+```
+
+## 2月25日 周五
+1.  特别想看一下netty的相关源码
+    1.  可惜没有太多时间。
