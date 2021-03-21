@@ -5,12 +5,15 @@
 package erik.xieli.ds.enums;
 
 import com.google.common.io.BaseEncoding;
+import erik.xieli.FragmentDecoder;
 import lombok.Getter;
 
 /**
  * @author yueyi
  * @version : DeviceType.java, v 0.1 2021年02月28日 1:14 下午 yueyi Exp $
  */
+@Getter
+@FragmentDecoder(length = 1)
 public enum DeviceType implements Length {
 
     INTERNAL_COMBUSTION_DIESEL_CAR("0x01", "内燃柴油车"),
@@ -35,9 +38,9 @@ public enum DeviceType implements Length {
         return 1;
     }
 
-    public static DeviceType valuesOf(byte b) {
+    public static DeviceType valuesOf(byte[] bytes) {
         for (DeviceType type : values()) {
-            if (BaseEncoding.base16().decode(type.getCode().replace("0x", ""))[0] == b) {
+            if (BaseEncoding.base16().decode(type.getCode().replace("0x", ""))[0] == bytes[0]) {
                 return type;
             }
         }

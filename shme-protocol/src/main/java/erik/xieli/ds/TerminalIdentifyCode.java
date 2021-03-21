@@ -4,12 +4,16 @@
  */
 package erik.xieli.ds;
 
+import erik.xieli.FragmentDecoder;
 import erik.xieli.ds.enums.Length;
+import lombok.Data;
 
 /**
  * @author yueyi
  * @version : TerminalIdentifyCode.java, v 0.1 2021年02月28日 1:41 下午 yueyi Exp $
  */
+@Data
+@FragmentDecoder(length = 10)
 public class TerminalIdentifyCode implements Length {
 
     private String content;

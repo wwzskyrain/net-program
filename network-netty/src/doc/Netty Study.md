@@ -88,3 +88,13 @@
 ## 2月25日 周五
 1.  特别想看一下netty的相关源码
     1.  可惜没有太多时间。
+
+
+# 三月
+## 3月21日 周日
+1.  开始做一个心跳小程序-done
+2.  用spring-boot+netty+数据库，把数据保留下来
+    1.  基本完成了spring-boot + netty
+    2.  基本完成了spring-boot + mybatis
+
+  

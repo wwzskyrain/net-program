@@ -5,6 +5,7 @@
 package erik.xieli.ds.enums;
 
 import com.google.common.io.BaseEncoding;
+import erik.xieli.FragmentDecoder;
 import lombok.Getter;
 
 /**
@@ -12,7 +13,8 @@ import lombok.Getter;
  * @version : ReplyFlag.java, v 0.1 2021年02月28日 11:32 上午 yueyi Exp $
  */
 @Getter
-public enum ReplyFlag {
+@FragmentDecoder(length = 1)
+public enum ReplyFlag implements Length {
     SUCCESS("0x01", "成功", "接收到的信息正确"),
     ERROR("0x02", "错误", "接收到的信息错误"),
     TERMINAL_IDENTIFIER_REPEAT("0x03", "终端识别码重复", "终端识别码重复错误"),
@@ -31,12 +33,29 @@ public enum ReplyFlag {
         this.desc = desc;
     }
 
+    @Override
+    public int length() {
+        return 1;
+    }
+
     public static ReplyFlag valueOf(byte b) {
         for (ReplyFlag flag : values()) {
             if (OTHER.equals(flag)) {
                 continue;
             }
             if (BaseEncoding.base16().decode(flag.getCode().replace("0x", ""))[0] == b) {
+                return flag;
+            }
+        }
+        return OTHER;
+    }
+
+    public static ReplyFlag valuesOf(byte[] bytes) {
+        for (ReplyFlag flag : values()) {
+            if (OTHER.equals(flag)) {
+                continue;
+            }
+            if (BaseEncoding.base16().decode(flag.getCode().replace("0x", ""))[0] == bytes[0]) {
                 return flag;
             }
         }

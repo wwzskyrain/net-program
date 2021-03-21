@@ -5,6 +5,7 @@
 package erik.xieli.ds.enums;
 
 import com.google.common.io.BaseEncoding;
+import erik.xieli.FragmentDecoder;
 import lombok.Getter;
 import lombok.ToString;
 
@@ -16,6 +17,7 @@ import static erik.xieli.ds.CommonConstants.DIRECTION_UPLOAD;
  * @version : CommandFlag.java, v 0.1 2021年02月28日 10:59 上午 yueyi Exp $
  */
 @ToString
+@FragmentDecoder(length = 1)
 public enum CommandFlag implements Length {
     CAR_LOG_IN("0x01", "车辆登入", DIRECTION_UPLOAD),
     RT_MESSAGE_UPLOAD("0x02", " 实时信息上报", DIRECTION_UPLOAD),
@@ -27,6 +29,8 @@ public enum CommandFlag implements Length {
     SETTING_COMMAND("0x81", "设置命令", DIRECTION_DOWN_LOAD),
     CAR_TERMINAL_CONTROL_COMMAND("0x82", "车载终端控制命令", DIRECTION_DOWN_LOAD),
     ;
+
+    public static int length = 1;
 
     @Getter
     private String code;
@@ -43,6 +47,15 @@ public enum CommandFlag implements Length {
     public static CommandFlag valuesOf(byte b) {
         for (CommandFlag commandFlag : values()) {
             if (BaseEncoding.base16().decode(commandFlag.getCode().replace("0x", ""))[0] == b) {
+                return commandFlag;
+            }
+        }
+        return null;
+    }
+
+    public static CommandFlag valuesOf(byte[] bytes) {
+        for (CommandFlag commandFlag : values()) {
+            if (BaseEncoding.base16().decode(commandFlag.getCode().replace("0x", ""))[0] == bytes[0]) {
                 return commandFlag;
             }
         }
@@ -73,6 +86,6 @@ public enum CommandFlag implements Length {
 
     @Override
     public int length() {
-        return 0;
+        return 1;
     }
 }

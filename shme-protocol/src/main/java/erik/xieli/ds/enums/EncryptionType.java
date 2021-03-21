@@ -5,6 +5,7 @@
 package erik.xieli.ds.enums;
 
 import com.google.common.io.BaseEncoding;
+import erik.xieli.FragmentDecoder;
 import lombok.Getter;
 
 /**
@@ -12,7 +13,8 @@ import lombok.Getter;
  * @version : EncryptionType.java, v 0.1 2021年02月28日 1:34 下午 yueyi Exp $
  */
 @Getter
-public enum EncryptionType {
+@FragmentDecoder(length = 1)
+public enum EncryptionType implements Length {
     NONE("0x01", "数据不加密"),
     RSA("0x02", "RSA 算法加密"),
     EXCEPTION("0xFE", "表示异常"),
@@ -28,9 +30,14 @@ public enum EncryptionType {
         this.desc = desc;
     }
 
-    public static EncryptionType valuesOf(byte b) {
+    @Override
+    public int length() {
+        return 1;
+    }
+
+    public static EncryptionType valuesOf(byte[] bytes) {
         for (EncryptionType type : values()) {
-            if (BaseEncoding.base16().decode(type.getCode().replace("0x", ""))[0] == b) {
+            if (BaseEncoding.base16().decode(type.getCode().replace("0x", ""))[0] == bytes[0]) {
                 return type;
             }
         }

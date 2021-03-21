@@ -31,6 +31,7 @@ erik/study/net/netty/action/chapter09/AbsIntegerEncoder.class
 erik/study/net/netty/action/chapter07/TaskClient.class
 erik/study/net/netty/action/chapter02/echo/EchoServer$1.class
 erik/study/net/netty/doc/demo/time/client/encode/TimeEncode.class
+erik/study/net/netty/heartbeat/server/BeatServer$1.class
 erik/study/net/netty/doc/demo/time2/ServerHandler.class
 erik/study/net/netty/doc/demo/echo/server/EchoServer.class
 erik/study/net/netty/doc/demo/time/server/TimeServerWithEncode.class
@@ -63,6 +64,7 @@ erik/study/net/netty/action/chapter13/server/LogEvent.class
 erik/study/net/netty/action/chapter13/client/LogEventMonitor.class
 erik/study/net/netty/doc/demo/echototest/EchoServer$1.class
 erik/study/net/netty/doc/demo/echototest/EchoServer.class
+erik/study/net/netty/heartbeat/client/BeatClientHandler.class
 erik/study/net/netty/doc/demo/time/client/encode/TimeEncodeWithMessageToByteEncode.class
 erik/study/net/netty/doc/demo/time2/NettyClient.class
 erik/study/net/netty/doc/demo/echo/client/EchoClient$1.class
@@ -70,6 +72,7 @@ erik/study/net/netty/doc/demo/echo/server/EchoServerHandler.class
 erik/study/net/netty/action/chapter11/CmdDecoder$Cmd.class
 erik/study/net/netty/action/chapter02/echo/EchoServerHandler.class
 erik/study/net/netty/doc/demo/time/client/decode/TimeDecodeWithPojo.class
+erik/study/net/netty/heartbeat/server/BeatServer.class
 erik/study/net/netty/doc/demo/time/server/handler/TimeServerHandlerWithEncoder.class
 erik/study/net/netty/action/chapter10/decoder/SafeByteMessageDecoder.class
 erik/study/net/netty/action/chapter11/IdleHandlerInitializer.class
@@ -79,8 +82,10 @@ erik/study/net/netty/action/chapter10/decoder/ToIntegerDecoderTest.class
 erik/study/net/netty/doc/demo/echowithinput/EchoClientHandler.class
 erik/study/net/netty/doc/demo/time2/LoopBackTimeStamp.class
 erik/study/net/netty/doc/demo/echototest/EchoClient.class
+erik/study/net/netty/heartbeat/server/BeatServerHandler.class
 erik/study/net/netty/doc/demo/echo/client/EchoClientHandler.class
 erik/study/net/netty/doc/demo/time/server/TimeServer$1.class
+erik/study/net/netty/heartbeat/client/BeatClient.class
 erik/study/net/netty/action/chapter13/client/LogEventMonitor$1.class
 erik/study/net/netty/doc/demo/time3/TimeEncodeWithMessageToByteEncode.class
 erik/study/net/netty/doc/demo/echototest/EchoOutboundHandler1.class
@@ -92,6 +97,7 @@ erik/study/net/netty/action/chapter02/echo/EchoClient.class
 erik/study/net/netty/action/chapter12/TextWebSocketFrameHandler.class
 erik/study/net/netty/doc/demo/time/server/handler/TimeServerHandler$1.class
 erik/study/net/netty/doc/demo/time/server/TimeServer.class
+erik/study/net/netty/heartbeat/BeatServiceConstants.class
 erik/study/net/netty/action/chapter12/ChatServerInitializer.class
 erik/study/net/netty/action/chapter12/ChatServer.class
 erik/study/net/netty/doc/demo/time3/TimeClientWithDecoder.class
@@ -100,4 +106,5 @@ erik/study/net/netty/doc/demo/echowithinput/EchoClient.class
 erik/study/net/netty/action/chapter13/client/LogEventHandler.class
 erik/study/net/netty/doc/demo/echowithinput/EchoServerMain$EchoServer.class
 erik/study/net/netty/doc/demo/time2/TimeStampEncoder.class
+erik/study/net/netty/heartbeat/client/BeatClient$1.class
 erik/study/net/netty/doc/demo/time/client/TimeClientWithDecoder.class

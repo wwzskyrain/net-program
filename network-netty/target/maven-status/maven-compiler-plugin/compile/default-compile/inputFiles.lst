@@ -18,6 +18,7 @@
 /Users/yueyi/project_yue/net-program/network-netty/src/main/java/erik/study/net/netty/doc/demo/time3/TimeDecodeWithPojo.java
 /Users/yueyi/project_yue/net-program/network-netty/src/main/java/erik/study/net/netty/doc/demo/time/server/TimeServer.java
 /Users/yueyi/project_yue/net-program/network-netty/src/main/java/erik/study/net/netty/action/chapter06/EventLoopDemo.java
+/Users/yueyi/project_yue/net-program/network-netty/src/main/java/erik/study/net/netty/heartbeat/client/BeatClientHandler.java
 /Users/yueyi/project_yue/net-program/network-netty/src/main/java/erik/study/net/netty/action/chapter02/echo/EchoServer.java
 /Users/yueyi/project_yue/net-program/network-netty/src/main/java/erik/study/net/netty/action/chapter07/ExecuteTaskHandler.java
 /Users/yueyi/project_yue/net-program/network-netty/src/main/java/erik/study/net/netty/doc/demo/time/server/handler/TimeServerHandlerWithEncoder.java
@@ -41,6 +42,7 @@
 /Users/yueyi/project_yue/net-program/network-netty/src/main/java/erik/study/net/netty/action/chapter09/AbsIntegerEncodeTest.java
 /Users/yueyi/project_yue/net-program/network-netty/src/main/java/erik/study/net/netty/doc/demo/time2/NettyClient.java
 /Users/yueyi/project_yue/net-program/network-netty/src/main/java/erik/study/net/netty/doc/demo/time/client/TimeClientWithDecoder.java
+/Users/yueyi/project_yue/net-program/network-netty/src/main/java/erik/study/net/netty/heartbeat/server/BeatServer.java
 /Users/yueyi/project_yue/net-program/network-netty/src/main/java/erik/study/net/netty/action/chapter13/client/LogEventDecoder.java
 /Users/yueyi/project_yue/net-program/network-netty/src/main/java/erik/study/net/netty/action/chapter12/ChatServerInitializer.java
 /Users/yueyi/project_yue/net-program/network-netty/src/main/java/erik/study/net/netty/doc/demo/echototest/EchoInboundHandler3.java
@@ -58,10 +60,13 @@
 /Users/yueyi/project_yue/net-program/network-netty/src/main/java/erik/study/net/netty/action/chapter09/FixedLengthFrameDecodeTest.java
 /Users/yueyi/project_yue/net-program/network-netty/src/main/java/erik/study/net/netty/doc/demo/discard/DiscardServerHandler.java
 /Users/yueyi/project_yue/net-program/network-netty/src/main/java/erik/study/net/netty/doc/demo/echowithinput/EchoClientHandler.java
+/Users/yueyi/project_yue/net-program/network-netty/src/main/java/erik/study/net/netty/heartbeat/client/BeatClient.java
 /Users/yueyi/project_yue/net-program/network-netty/src/main/java/erik/study/net/netty/action/chapter02/echo/EchoClient.java
 /Users/yueyi/project_yue/net-program/network-netty/src/main/java/erik/study/net/netty/doc/demo/time/pojo/UnixTime.java
 /Users/yueyi/project_yue/net-program/network-netty/src/main/java/erik/study/net/netty/doc/demo/time/client/encode/TimeEncodeWithMessageToByteEncode.java
 /Users/yueyi/project_yue/net-program/network-netty/src/main/java/erik/study/net/netty/doc/demo/time/server/handler/TimeServerHandler.java
+/Users/yueyi/project_yue/net-program/network-netty/src/main/java/erik/study/net/netty/heartbeat/BeatServiceConstants.java
+/Users/yueyi/project_yue/net-program/network-netty/src/main/java/erik/study/net/netty/heartbeat/server/BeatServerHandler.java
 /Users/yueyi/project_yue/net-program/network-netty/src/main/java/erik/study/net/netty/action/chapter13/client/LogEventHandler.java
 /Users/yueyi/project_yue/net-program/network-netty/src/main/java/erik/study/net/netty/action/chapter06/Skip.java
 /Users/yueyi/project_yue/net-program/network-netty/src/main/java/erik/study/net/netty/action/chapter13/server/LogEvent.java
